@@ -1,0 +1,31 @@
+
+/* 마우스 커서 */
+
+.mouse_cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  z-index: 9999;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: rgba(79, 42, 225, 0.5) 1px solid;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.2s;
+}
+.mouse_cursor2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 9999;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: rgba(79, 42, 225, 0.5) 1px solid;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.2s;
+}

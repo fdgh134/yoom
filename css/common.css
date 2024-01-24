@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+:root {
+	font-size: 16px;
+	--color-text: #fdf17b;
+	--color-text-alt: #8bff85;
+	--color-text-grid: #fff;
+	--color-bg: #000;
+	--color-link: #54ad8a;
+	--color-link-hover: #a054fd;
+	--cut: 20px;
+}
+body{
+  background: #000 url(../img/bg.jpg) no-repeat 50% 50% fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Pretendard-Regular';
+	font-variation-settings: "wdth" 80, "wght" 300;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.body_overflow{
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+.none{
+  display: none !important;
+}
+/*더보기 버튼*/
+
+.btnframe {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+.btnframe > button {
+  margin: 20px;
+}
+.btnframe > .custom-btn {
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Pretendard-Regular';
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btnframe > .infobtn {
+  background: #1a8ae6;
+  border: none;
+  z-index: 1;
+}
+.btnframe > .infobtn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #0445a7;
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.btnframe > .infobtn:hover {
+  color: #fff;
+}
+.btnframe > .infobtn:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btnframe > .infobtn:active {
+  top: 2px;
+}
