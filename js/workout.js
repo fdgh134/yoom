@@ -54,4 +54,7 @@ $(function(){
   $(".infobtn7").click(function(){
     window.open("http://snfour5.dothome.co.kr/");
   });
+  $(".infobtn8").click(function(){
+    window.open("http://glox.co.kr/");
+  });
 });
