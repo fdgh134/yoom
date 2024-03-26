@@ -165,4 +165,7 @@ $(".link6 > div:nth-child(3)").click(function(){
 $(".link7 > div:nth-child(3)").click(function(){
   window.open("work/est.html");
 });
+$(".link8 > div:nth-child(3)").click(function(){
+  window.open("work/glox.html");
+});
 

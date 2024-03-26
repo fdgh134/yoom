@@ -1,0 +1,380 @@
+@charset "utf-8";
+@import url("common.css");
+@import url("cursor.css");
+
+
+/*헤더영역*/
+
+.header_top{
+  position: fixed;
+  left: 0;
+  top: 1em;
+  width: 100%;
+  z-index: 1000;
+}
+.header_inner{
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.header_line_top, .header_line_bottom{
+  height: 1px;
+  display: block;
+  background-color: #fff;
+  transform-origin: 0 0;
+  width: 100%;
+}
+.header_line_top{
+  height: 2px;
+}
+.header_content{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  pointer-events: auto;
+  align-items: center;
+}
+.header_content > h1, .header_content > a, .header_content > span, .header_bottom_out > a > p{
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+.header_content > span{
+  display: flex;
+  align-items: center;
+}
+.square{
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  background: radial-gradient(circle,white,grey);
+  text-align: center;
+  color: white;
+  animation-name : lotate;   
+  animation-duration : 3s;        
+  animation-iteration-count : infinite; 
+  animation-timing-function : linear;   
+  border-radius: 6px; 
+}
+@keyframes lotate {
+  0% {
+    transform : rotate(0deg)
+  }
+
+  50% {
+    transform : rotate(180deg)
+  }
+
+  100% {
+    transform : rotate(360deg)
+  }
+}
+.header_bottom_out{
+  padding: 12px
+}
+
+.content_inner, .work_detail{
+  margin: 0 auto;
+  margin-top: 15vh;
+  overflow: hidden;
+  padding: 0 clamp(24px,4vw,60px);
+  display: flex;
+}
+
+.line{
+  width: 100%;
+  position: relative;
+}
+.line:after{
+  content:"";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right,white,grey);
+  transition: all .5s;
+}
+.line:before{
+  content:"";
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to left,white,grey);
+  transition: all .5s;
+}
+.lineafter:after{
+  width: 50%;
+}
+.linebefore:before{
+  width: 50%;
+}
+.mockup{
+  width: 50%;
+  background: url(../img/metapos3.png);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  height: 70vh;
+}
+.discription{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+}
+.work_info > ul{
+  display: flex;
+  gap: 0.5vw;
+}
+.work_info > ul > li, .work_title > span{
+  color: darkgray;
+}
+.work_title > h3{
+  margin: 1.5vh 0;
+}
+.work_info > ul, .work_info > div > p:first-child{
+  margin-bottom: 1.5vh;
+}
+.detail_page{
+  width: 80%;
+  background-size: cover;
+  margin: 0 auto;
+  border-radius: 1rem;
+  position: sticky;
+  overflow: scroll;
+  height: 80vh;
+}
+.detail_page > img{
+  width: 100%;
+}
+.detail_discription{
+  display: flex;
+  padding: 0 24px;
+}
+.detail_discription > p{
+  width: 50%;
+}
+.line2{
+  margin: calc(2vh + 3vw + 2rem) 0;
+}
+.other_project{
+  padding: calc(1vh + 2vw + 1rem) clamp(24px,4vw,60px);
+}
+.other_project > h4{
+  padding: 1rem;
+}
+.other_project > ul{
+  display: flex;
+  flex-direction: column;
+}
+.other_project > ul > li{
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255);
+}
+
+.other_project > ul > li > a{
+  display: block;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.other_project > ul > li > a > div{
+  color: #fff;
+  font-size: 20px;
+}
+.other_project > ul > li > a > div::after{
+  background-color: var(--color-beige);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  transition: transform .3s;
+  width: 100%;
+}
+
+/* bottom section */
+
+.contact{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  overflow-x: hidden;
+  max-width: 2561px;
+  z-index: 1;
+}
+.contact_inner{
+  position: relative;
+}
+.contact_inner > div:nth-child(1) > p{
+  font-size: 20px;
+  color: darkgray;
+  margin-bottom: 2vh;
+}
+.contact_inner > div:nth-child(2) > p{
+  font-size: 30px;
+  color: #fff;
+}
+.contact_inner > div:nth-child(3) > p{
+  font-size: 80px;
+  color: #fff;
+}
+.contact_inner_2{
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 58rem;
+  margin-top: 50px;
+}
+.contact_inner_2 > div{
+  width: 50%;
+}
+.contact_inner_2 div > p{
+  color: #fff;
+  font-weight: 400;
+  line-height: 150%;
+}
+.footer_inner_center > p, .footer_inner_copyright > p{
+  color: rgb(192, 192, 192);
+  font-size: 0.7rem;
+}
+
+
+/* pc */
+
+@media screen and ( min-width: 1026px ){
+
+  .content_inner{
+    width: 100%;
+    max-width: 2560px
+  }
+  .item_inner > h4, .total_career > h4, .other_project > h4{
+    font-size: 30px;
+  }
+  .work_title > h3{
+    font-size: 68px;
+  }
+  .contact{
+    height: 30vh;
+    padding: 0 clamp(24px,4vw,60px);
+  }
+
+}
+
+
+
+/* 태블릿 */
+@media screen and ( max-width: 1025px ) and ( min-width: 768px ){
+  
+  .content_inner, .work_detail{
+    flex-direction: column;
+  }
+  .mockup{
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50vh;
+  }
+  .discription{
+    width: 100%;
+    margin: 4vh 0;
+  }
+  .detail_page > img{
+    content: url(../img/glox_tb.png);
+  }
+  .work_info > ul > li, .work_title > span{
+    font-size: 28px;
+  }
+  .work_info > div > p, .detail_discription > p{
+    font-size: 24px;
+  }
+  .detail_discription{
+    flex-direction: column;
+    gap: 1.5vh;
+  }
+  .detail_discription > p{
+    width: 100%;
+  }
+  .item_inner > h4, .total_career > h4, .other_project > h4{
+    font-size: 40px;
+  }
+  .work_title > h3{
+    font-size: 50px;
+  }
+  .contact{
+    padding: 2vh clamp(24px,4vw,60px);
+  }
+}
+
+
+
+/* 모바일 */
+@media screen and ( max-width: 767px ){
+  
+  .content_inner, .work_detail{
+    flex-direction: column;
+  }
+  .mockup{
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30vh;
+  }
+  .discription{
+    width: 100%;
+    margin: 4vh 0;
+  }
+  .detail_page > img{
+    content: url(../img/glox_mb.png);
+  }
+  .work_info > div > p, .detail_discription > p, .work_info > ul > li, .work_title > span{
+    font-size: 14px;
+  }
+  .detail_discription{
+    flex-direction: column;
+    gap: 1.5vh;
+  }
+  .detail_discription > p{
+    width: 100%;
+  }
+  .item_inner > h4, .total_career > h4, .other_project > h4{
+    font-size: 20px;
+  }
+  .work_title > h3{
+    font-size: 30px;
+  }
+  .contact{
+    flex-direction: column;
+    padding: 15vh calc(1vh + 1vw + 2rem);
+    align-items: flex-start;
+  }
+  .contact_inner > div:nth-child(1) > p{
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .contact_inner > div:nth-child(2) > p{
+    font-size: 24px;
+  }
+  .contact_inner > div:nth-child(3) > p{
+    font-size: 30px;
+  }
+  .contact_footer{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+}
