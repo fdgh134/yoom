@@ -156,4 +156,13 @@ $(".link3 > div:nth-child(3)").click(function(){
 $(".link4 > div:nth-child(3)").click(function(){
   window.open("work/metainnovation.html");
 });
+$(".link5 > div:nth-child(3)").click(function(){
+  window.open("work/nike.html");
+});
+$(".link6 > div:nth-child(3)").click(function(){
+  window.open("work/zin.html");
+});
+$(".link7 > div:nth-child(3)").click(function(){
+  window.open("work/est.html");
+});
 
