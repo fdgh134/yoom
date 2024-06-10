@@ -129,6 +129,7 @@ $(function(){
   } else {
     welcomeSection.remove();
     $('.wrapper').remove();
+    $('body').css('overflow', 'auto');
     $('.profile').addClass("animate__lightSpeedInLeft");
     $('.profile, .introduce, .career, .btnframe, .content, .content .grid, .content .grid .grud__title, .card, .content2, .content2_inner, .contact').removeClass("none");
 
