@@ -390,6 +390,7 @@ h3{
   }
   .me > div{
     max-width: 1024px;
+    position: relative;
   }
   .me > .pic > .imgbox{
     width: 300px;
