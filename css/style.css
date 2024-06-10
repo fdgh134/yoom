@@ -418,6 +418,9 @@ h3{
   .career{
     width: 25%;
   }
+  .career > .company{
+    margin-bottom: 20px;
+  }
   .grid {
 		grid-template-columns: repeat(3,300px);
 	}
