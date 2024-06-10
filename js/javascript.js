@@ -1,62 +1,87 @@
 
 /* 인트로 */
 $(function(){
+
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  function getCookie(name) {
+    var nameEq = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];;
+      while (c.charAt(0) == ' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEq) == 0)
+        return c.substring(nameEq.length, c.length);
+    }
+    return null;
+  }
+
   var welcomeSection = $('.welcome-section'),
         enterButton = welcomeSection.find('.content-wrap');
 
-  setTimeout(function(){
-    welcomeSection.removeClass('content-hidden');
-  },800);
+  if (!getCookie("visited")) {
 
-  /* 안녕하세요! */
+    setTimeout(function(){
+      welcomeSection.removeClass('content-hidden');
+    },800);
 
-  enterButton.on('click',function(e){
-    e.preventDefault();
-    welcomeSection.addClass('content-hidden').fadeOut();
+    /* 안녕하세요! */
 
-    const tl = gsap.timeline({
-      id: 'Timeline',
-      onComplete: function () {
-        // 트윈이 완료된 후에 실행되는 코드
-        $('.wrapper').css('display', 'none');
-      }
-    });
+    enterButton.on('click',function(e){
+      e.preventDefault();
+      welcomeSection.addClass('content-hidden').fadeOut();
 
-    const colors = ['#5c6cff', '#5CB8E4', '#F2F2F2'];
-
-    function tween (node) {
-      let path = node;
-      const delay = Math.random() * 1;
-      const length = path.getTotalLength();
-      colors.forEach((color, index) => {
-        if (index !== 0) {
-          path = path.cloneNode();
-          node.parentNode.appendChild(path);
+      const tl = gsap.timeline({
+        id: 'Timeline',
+        onComplete: function () {
+          // 트윈이 완료된 후에 실행되는 코드
+          $('.wrapper').css('display', 'none');
         }
-        path.setAttribute('stroke', color);
-        tl.set(path, {
-          strokeDasharray: length + 0.5,
-          strokeDashoffset: length + 0.6,
-          autoRound: false
-        }, 0);
-        tl.to(path, {
-          strokeDashoffset: 0,
-          autoRound: false,
-          duration: 1.2,
-          ease: 'power3.out'
-        }, index * 0.25 + delay);
-      });
-    }
-
-    function fadeOutAnimation() {
-
-      tl.to('.wrapper', {
-        opacity: 0, 
-        duration: 1, 
-        ease: 'power3.ease'
       });
 
-    }
+      const colors = ['#5c6cff', '#5CB8E4', '#F2F2F2'];
+
+      function tween (node) {
+        let path = node;
+        const delay = Math.random() * 1;
+        const length = path.getTotalLength();
+        colors.forEach((color, index) => {
+          if (index !== 0) {
+            path = path.cloneNode();
+            node.parentNode.appendChild(path);
+          }
+          path.setAttribute('stroke', color);
+          tl.set(path, {
+            strokeDasharray: length + 0.5,
+            strokeDashoffset: length + 0.6,
+            autoRound: false
+          }, 0);
+          tl.to(path, {
+            strokeDashoffset: 0,
+            autoRound: false,
+            duration: 1.2,
+            ease: 'power3.out'
+          }, index * 0.25 + delay);
+        });
+      }
+
+      function fadeOutAnimation() {
+
+        tl.to('.wrapper', {
+          opacity: 0, 
+          duration: 1, 
+          ease: 'power3.ease'
+        });
+
+      }
 
     document.querySelectorAll('.motion path, .motion line').forEach(p => tween(p));
     fadeOutAnimation();
@@ -98,7 +123,10 @@ $(function(){
       });
     });
     $('.wrap').removeClass("content-hidden");
-  });
+    
+    setCookie("visited", "true", 1);
+    });
+  }
 });
 
 /* 마우스 스크롤 이벤트 */
