@@ -130,7 +130,7 @@ $(function(){
     welcomeSection.remove();
     $('.wrapper').remove();
     $('body').css('overflow', 'auto');
-    $('.profile, .introduce, .career, .btnframe, .content, .content .grid, .content .grid .grud__title, .card, .content2, .content2_inner, .contact').removeClass("none");
+    $('.header_top, .profile, .introduce, .career, .btnframe, .content, .content .grid, .content .grid .grud__title, .card, .content2, .content2_inner, .contact').removeClass("none");
 
   }
 });
