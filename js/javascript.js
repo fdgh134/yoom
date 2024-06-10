@@ -130,7 +130,7 @@ $(function(){
     welcomeSection.remove();
     $('.wrapper').remove();
     $('.profile').addClass("animate__lightSpeedInLeft");
-    $('.profile, .introduce, .career, .btnframe, .content, .grid, .grud__title, .card, .content2, .content2_inner, .contact').removeClass("none");
+    $('.profile, .introduce, .career, .btnframe, .content, .content .grid, .content .grid .grud__title, .card, .content2, .content2_inner, .contact').removeClass("none");
 
   }
 });
