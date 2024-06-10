@@ -129,11 +129,8 @@ $(function(){
   } else {
     welcomeSection.remove();
     $('.wrapper').remove();
-    $('.profile').removeClass("none");
-    $('.introduce').removeClass("none");
-    $('.career').removeClass("none");
-    $('.btnframe').removeClass("none");
-    $('.content').removeClass("none");
+    $('.profile, .introduce, .career, .btnframe, .content, .grid, .grud__title, .card, .content2, .content2_inner, .contact').removeClass("none");
+
   }
 });
 
