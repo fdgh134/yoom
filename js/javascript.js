@@ -25,7 +25,7 @@ $(function(){
   }
 
   var welcomeSection = $('.welcome-section'),
-        enterButton = welcomeSection.find('.content-wrap');
+      enterButton = welcomeSection.find('.content-wrap');
 
   if (!getCookie("visited")) {
 
@@ -123,9 +123,12 @@ $(function(){
       });
     });
     $('.wrap').removeClass("content-hidden");
-    
+
     setCookie("visited", "true", 1);
     });
+  } else {
+    welcomeSection.remove();
+    $('.wrapper').css('display', 'block');
   }
 });
 
