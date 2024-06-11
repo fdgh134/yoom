@@ -88,9 +88,9 @@ $(function(){
 
     /* 프로필사진 액션 */
     
-    $('.pic > .imgbox').addClass("animate__flipInY").addClass("animate__delay-4s");
+    $('.pic > .imgbox').addClass("animate__flipInY").addClass("animate__delay-4s").addClass("animate__headShake").addClass("animate__infinite");
     $('.pic > .imgbox').mouseenter(function(){
-      $('.pic').removeClass("animate__headShake").addClass("position-relative").addClass("animate__headShake").addClass("animate__infinite");
+      $('.pic').removeClass("animate__headShake").addClass("position-relative");
       $('.profile').removeClass("none").addClass("animate__lightSpeedInLeft");
       $('.header_top').removeClass("none").addClass("animate__fadeInDown");
       $('.introduce').removeClass("none").addClass("animate__fadeInUpBig").addClass("animate__delay-0.5s").one('animationend', function () {
