@@ -88,7 +88,8 @@ $(function(){
 
     /* 프로필사진 액션 */
     
-    $('.pic > .imgbox').addClass("animate__flipInY").addClass("animate__delay-4s").addClass("animate__headShake").addClass("animate__infinite");
+    $('.pic > .imgbox').addClass("animate__flipInY").addClass("animate__delay-4s");
+    $('.pic').addClass("animate__headShake").addClass("animate__infinite");
     $('.pic > .imgbox').mouseenter(function(){
       $('.pic').removeClass("animate__headShake").addClass("position-relative");
       $('.profile').removeClass("none").addClass("animate__lightSpeedInLeft");
