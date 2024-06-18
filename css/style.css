@@ -572,6 +572,9 @@ h3{
     padding: 0 24px;
     flex-direction: column;
   }
+  .company, .certificate {
+    margin-top: 30px;
+  }
   .profile{
     position: inherit;
     right: 0;
