@@ -270,7 +270,7 @@ h3{
 /* right side */
 
 .content2_list_inner{
-  padding: 0 calc(1vh + 1vw + 2rem);
+  padding: 0 calc(1vh + 1vw + 1rem);
   width: 100%;
 }
 .content2_list_link{
@@ -556,7 +556,7 @@ h3{
 @media screen and ( max-width: 767px ){
 
   .pic{
-    margin-top: 100px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
     gap: 24px;
@@ -567,6 +567,7 @@ h3{
     margin: 0 0 0 3vh;
   }
   .aboutme{
+    margin: 50px auto;
     padding: 0 24px;
     flex-direction: column;
   }
