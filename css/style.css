@@ -152,6 +152,7 @@ h3{
   top: 1em;
   width: 100vw;
   z-index: 1000;
+  background-color: rgba(26,26,26,0.8);
 }
 .header_inner{
   margin: 0 auto;
