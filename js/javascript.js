@@ -106,10 +106,10 @@ $(function(){
                 $('.btnframe').removeClass("none").addClass("animate__animated").addClass("animate__delay-1s").addClass("animate__fadeInDown");
                 $('.line').addClass("lineafter").addClass("linebefore");
                 $('body').removeClass("body_overflow");
-                $('.content, .grid, .content2_inner').removeClass("none");
-                $('.content2, .contact').removeClass("none");
+                $('.content, .grid, .content2_inner, .content3_inner').removeClass("none");
+                $('.content2, .content3, .contact').removeClass("none");
               }
-            }.bind(this), index * 300);
+            }.bind(this), index * 170);
           });
 
           $('.introduce svg').mouseenter(function(){
