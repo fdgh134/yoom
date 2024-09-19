@@ -40,7 +40,7 @@ g{
   font-size: 40px;
 }
 .content-wrap{
-  margin-top: 20%;
+  margin-top: 17%;
   text-align: center;
   cursor: pointer;
   transition: transform 1s ease;
@@ -91,7 +91,7 @@ g{
 @media screen and ( max-width: 767px ){
 
   .content-wrap{
-    margin-top: 100%;
+    margin-top: 95%;
   }
   .wrapper > h1{
     margin-top: 80%;
