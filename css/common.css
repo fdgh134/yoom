@@ -105,3 +105,6 @@ li{
 .btnframe > .infobtn:active {
   top: 2px;
 }
+.header_top > .header_inner > .header_bottom_out > a > p{
+  color: #fff;
+}
