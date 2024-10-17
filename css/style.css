@@ -632,7 +632,7 @@ h3{
     padding: 12px 24px;
   }
 
-  .content2_inner, .content2_inner{
+  .content2_inner, .content3_inner{
     flex-direction: column;
   }
   .content2_info, .content3_inner > .content3_info{
