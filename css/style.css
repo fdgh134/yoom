@@ -635,7 +635,7 @@ h3{
   .content2_inner, .content2_inner{
     flex-direction: column;
   }
-  .content2_info, .content3_info{
+  .content2_info, .content3_inner > .content3_info{
     display: flex;
     flex-direction: column;
     width: 100%;

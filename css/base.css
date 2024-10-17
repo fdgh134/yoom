@@ -151,7 +151,7 @@ span.frame__demos-item:not(:first-child) {
 .grid {
 	display: grid;
 	position: relative;
-	width: 52%;
+	width: 1003px;
 	margin: 0 auto;
 	padding: 16vw 3vh 3vh 3vh;
 	grid-template-columns: 300px;
