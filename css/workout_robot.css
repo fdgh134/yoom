@@ -324,9 +324,10 @@
     padding: 0;
   }
   .header_content{
-    padding: 12px;
+    padding: 12px 4px;
     align-items: center;
     width: 100vw;
+    justify-content: normal;
   }
   .header_content > h1{
     width: 24%;
