@@ -332,6 +332,8 @@
   .discription{
     width: 100%;
     margin: 4vh 0;
+    padding: 0 6vw;
+    box-sizing: border-box;
   }
   .detail_page > img{
     content: url(../img/metapos_robot_mb.png);
