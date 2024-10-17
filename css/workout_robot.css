@@ -288,7 +288,7 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    width: 88vw;
+    width: 100vw;
   }
   .other_project{
     padding: calc(1vh + 2vw + 1rem) 0;
