@@ -377,8 +377,9 @@
     font-size: 30px;
   }
   .contact{
-    flex-direction: column;
-    padding: 15vh calc(1vh + 1vw + 2rem);
+    width: 96vw;
+    display: block;
+    padding: 15vh 2vw;
     align-items: flex-start;
   }
   .contact_inner > div:nth-child(1) > p{
@@ -395,6 +396,6 @@
     position: absolute;
     bottom: 1rem;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-75%,0);
   }
 }
