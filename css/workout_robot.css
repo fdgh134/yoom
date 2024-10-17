@@ -76,7 +76,6 @@
   margin: 0 auto;
   margin-top: 15vh;
   overflow: hidden;
-  padding: 0 clamp(24px,4vw,60px);
   display: flex;
   justify-content: center;
 }
