@@ -78,6 +78,7 @@
   overflow: hidden;
   padding: 0 clamp(24px,4vw,60px);
   display: flex;
+  justify-content: center;
 }
 
 .line{
@@ -289,7 +290,7 @@
     margin: 4vh 0;
   }
   .detail_page > img{
-    content: url(../img/metapos_main_tb.png);
+    content: url(../img/metapos_robot_tb.png);
   }
   .work_info > ul > li, .work_title > span{
     font-size: 28px;
@@ -334,7 +335,7 @@
     margin: 4vh 0;
   }
   .detail_page > img{
-    content: url(../img/metapos_main_mb.png);
+    content: url(../img/metapos_robot_mb.png);
   }
   .work_info > div > p, .detail_discription > p, .work_info > ul > li, .work_title > span{
     font-size: 14px;
