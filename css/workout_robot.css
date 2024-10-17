@@ -320,8 +320,26 @@
 /* 모바일 */
 @media screen and ( max-width: 767px ){
   
+  .header_inner{
+    padding: 0;
+  }
+  .header_content{
+    padding: 12px;
+    align-items: center;
+    width: 100vw;
+  }
+  .header_content > h1{
+    width: 24%;
+  }
   .content_inner, .work_detail{
     flex-direction: column;
+  }
+  .work_detail > .detail_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 88vw;
   }
   .mockup{
     width: 100%;
@@ -330,7 +348,7 @@
     height: 30vh;
   }
   .discription{
-    width: 100%;
+    width: 88vw;
     margin: 4vh 0;
     padding: 0 6vw;
     box-sizing: border-box;
