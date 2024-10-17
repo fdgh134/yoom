@@ -16,58 +16,6 @@
   margin: 0 auto;
   padding: 0 24px;
 }
-.header_line_top, .header_line_bottom{
-  height: 1px;
-  display: block;
-  background-color: #fff;
-  transform-origin: 0 0;
-  width: 100%;
-}
-.header_line_top{
-  height: 2px;
-}
-.header_content{
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  pointer-events: auto;
-  align-items: center;
-}
-.header_content > h1, .header_content > a, .header_content > span, .header_bottom_out > a > p{
-  color: #fff;
-  font-size: 1em;
-  text-decoration: none;
-}
-.header_content > span{
-  display: flex;
-  align-items: center;
-}
-.square{
-  width: 20px;
-  height: 20px;
-  margin: 8px;
-  background: radial-gradient(circle,white,grey);
-  text-align: center;
-  color: white;
-  animation-name : lotate;   
-  animation-duration : 3s;        
-  animation-iteration-count : infinite; 
-  animation-timing-function : linear;   
-  border-radius: 6px; 
-}
-@keyframes lotate {
-  0% {
-    transform : rotate(0deg)
-  }
-
-  50% {
-    transform : rotate(180deg)
-  }
-
-  100% {
-    transform : rotate(360deg)
-  }
-}
 .header_bottom_out{
   padding: 12px
 }
@@ -76,7 +24,6 @@
   margin: 0 auto;
   margin-top: 15vh;
   overflow: hidden;
-  padding: 0 clamp(24px,4vw,60px);
   display: flex;
   justify-content: center;
 }
@@ -116,7 +63,6 @@
   background: url(../img/glox-moc.png);
   background-size: cover;
   background-position-y: center;
-  background-position-x: center;
   height: 70vh;
 }
 .discription{
@@ -201,8 +147,6 @@
   width: 100%;
 }
 
-/* bottom section */
-
 .contact{
   position: relative;
   width: 100%;
@@ -252,7 +196,6 @@
   color: rgb(192, 192, 192);
   font-size: 0.7rem;
 }
-
 
 /* pc */
 
@@ -325,8 +268,30 @@
 /* 모바일 */
 @media screen and ( max-width: 767px ){
   
+  .header_inner{
+    padding: 0;
+  }
+  .header_content{
+    padding: 12px 4px;
+    align-items: center;
+    width: 100vw;
+    justify-content: normal;
+  }
+  .header_content > h1{
+    width: 24%;
+  }
   .content_inner, .work_detail{
     flex-direction: column;
+  }
+  .work_detail > .detail_inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 88vw;
+  }
+  .other_project{
+    padding: calc(1vh + 2vw + 1rem) 0;
   }
   .mockup{
     width: 100%;
@@ -335,8 +300,10 @@
     height: 30vh;
   }
   .discription{
-    width: 100%;
+    width: 100vw;
     margin: 4vh 0;
+    padding: 0 6vw;
+    box-sizing: border-box;
   }
   .detail_page > img{
     content: url(../img/glox_mb.png);
@@ -358,8 +325,9 @@
     font-size: 30px;
   }
   .contact{
-    flex-direction: column;
-    padding: 15vh calc(1vh + 1vw + 2rem);
+    width: 96vw;
+    display: block;
+    padding: 15vh 2vw;
     align-items: flex-start;
   }
   .contact_inner > div:nth-child(1) > p{
@@ -376,6 +344,6 @@
     position: absolute;
     bottom: 1rem;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-75%,0);
   }
 }
